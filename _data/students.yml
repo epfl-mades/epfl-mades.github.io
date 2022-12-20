@@ -1,0 +1,21 @@
+- name: Yann Lorris Müller
+  image: team_yann.jpeg
+  altimage:
+  position: Doctoral Assistant
+  email: yann.muller (at) epfl.ch
+  website:
+  scholar:
+  twitter:
+  description:
+  pubmed_name:
+
+- name: Bosang Luo
+  image: team_bosang.jpeg
+  altimage:
+  position: Doctoral Assistant
+  email: bosang.luo (at) epfl.ch
+  website:
+  scholar:
+  twitter:
+  description:
+  pubmed_name:
