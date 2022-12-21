@@ -223,8 +223,8 @@ display_tags: ["formatting", "images", "links", "math", "code"] # this tags will
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Raju Natarajan, Natarajan, Natarajan]
+  first_name: [Anirudh, A.R., Anirudh Raju]
 
   style: apa
   locale: en
@@ -250,7 +250,6 @@ scholar:
 filtered_bibtex_keywords:
   [
     abbr,
-    abstract,
     arxiv,
     bibtex_show,
     html,
