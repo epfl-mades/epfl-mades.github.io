@@ -16,4 +16,6 @@ The Laboratory of Materials Design and Simulation (MADES) is part of the <a href
 
 <img src="assets/img/MADES_summary.png" width="100%" class="center">
 
+<center>
 We develop first-principles phenomenological models of materials with the goal of understanding and designing novel materials, and processing techniques.
+</center>

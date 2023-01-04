@@ -76,8 +76,6 @@ nav_order: 2
   {% endfor %}
 {% endif %}
 
-<hr>
-
 {% if site.data.students %}
   <h2>Doctoral Students</h2>
   {% for person in site.data.students %}
@@ -110,7 +108,7 @@ nav_order: 2
         <p class="text-justify">{{person.description | markdownify}}</p>
     </div>
 </div>
-<hr>
+<!-- <hr> -->
   {% endfor %}
 {% endif %}
 
