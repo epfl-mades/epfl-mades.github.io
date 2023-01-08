@@ -23,12 +23,12 @@ To apply for a postdoctoral or graduate student position please send your applic
 - brief cover letter explaining your interest in MADES and how your profile fits our research goals
 
 ### Opportunities for students at EPFL
-MADES offers several semester and thesis projects to **masters students** at EPFL. The goals of the masters projects are tailored to individual student interests and the current topics of interest to the laboratory. Masters students that are interested in pursuing a semester project with MADES are encouraged to have:
+MADES offers several semester and thesis projects to **students** at EPFL. The goals of the projects are tailored to individual student interests and the current topics of interest to the laboratory. Students that are interested in pursuing a project with MADES are encouraged to have:
 - A basic understanding of working in a `UNIX` environment.
 - Elementary skills in any programming language such as `python`, `C++`, `julia` etc.
 - Well-versed in physics, mathematics and chemistry at the undergraduate level.
 
-If required, several tutorials on programming and computing within `UNIX` environments are readily available online. Please send an e-mail with your CV to [this address](mailto:anirudh.natarajan@epfl.ch?subject=*Masters Project*) if you are interested in pursuing a masters project in MADES for the upcoming semester.
+If required, several tutorials on programming and computing within `UNIX` environments are readily available online. Please send an e-mail with your CV to [this address](mailto:anirudh.natarajan@epfl.ch?subject=*EPFL Project*) if you are interested in pursuing a project in MADES for the upcoming semester.
 
 ### Funding Opportunities
 
