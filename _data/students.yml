@@ -6,16 +6,60 @@
   website:
   scholar:
   twitter:
-  description:
+  description: Yann received a Master’s degree in Materials Science and Engineering from the EPFL in 2021. After working for one year at the EMPA laboratory for Advanced Processing and Additive Manufacturing, he began a Ph.D. in Materials Science in the MADES laboratory in 2022. In his project, he employs first-principles electronic structure calculations and statistical mechanics techniques to elucidate precipitation mechanisms in refractory high entropy alloys. Specifically, he analyzes the formation of ordered precipitates from disordered solid solutions using computational methods. He constructs atomistic models to guide experimentalists in identifying alloys with optimal mechanical properties.
   pubmed_name:
 
-- name: Bosang Luo
-  image: team_bosang.png
+- name: Deepak Somani
+  image: team_deepak.png
   altimage:
   position: Doctoral Assistant
-  email: bosang.luo (at) epfl.ch
+  email: deepak.somani (at) epfl.ch
   website:
   scholar:
   twitter:
-  description:
+  description: Deepak graduated from the Indian Institute of Technology Kharagpur (IIT KGP) in 2023 with a Bachelor's in Mechanical Engineering and a Master's in Thermal Science and Engineering. He is working on generating methodologies to predict the properties of metallic alloys. Currently, he is working on a project to build a model that predicts the segregation energy values for bi-metallic alloys using the local environment descriptors of grain-boundary atoms.
   pubmed_name:
+
+- name: Claire Paetsch
+  image: team_claire.png
+  altimage:
+  position: Doctoral Assistant
+  email: claire.paetsch (at) epfl.ch
+  website:
+  scholar:
+  twitter:
+  description: Claire received her B.S and M.S in Materials Science and Engineering at ETH Zurich. She worked as a research scholar predicting the energy landscape of Li-Sulfur at LBNL using first-principles. In 2023 she began her Ph.D. at EPFL's MADES laboratory. Her current research aims to develop methods to design alloys for hydrogen related applications. Specifically, she is researching the thermodynamics and kinetics of high entropy alloys for hydrogen storage using first-principles and atomistic methods. 
+  pubmed_name:
+
+- name: Lorenzo Piersante
+  image: team_lorenzo.png
+  altimage:
+  position: Doctoral Assistant
+  email: lorenzo.piersante (at) epfl.ch
+  website:
+  scholar:
+  twitter:
+  description: Lorenzo received his Maser of Physics from the University of Oxford. His current PhD research focuses on the development of statistical mechanics approaches to the simulation of thermal processes in solid state systems, mainly metals.
+  pubmed_name:
+
+- name: Abdullah Aydemir
+  image: team_abdullah.png
+  altimage:
+  position: Master's student
+  email: abdullah.aydemir (at) epfl.ch
+  website:
+  scholar:
+  twitter:
+  description: Abdullah is currently pursuing his Master's degree in Materials Science and Engineering at EPFL. His research focuses on the first-principles study of the thermodynamic and vibrational properties of metallic alloys.
+  pubmed_name:
+
+- name: Ayesha Ulde
+  image: team_ayesha.png
+  position: Visiting Master's student
+  email: ayesha@smail.iitm.ac.in
+  website:
+  scholar:
+  twitter:
+  description: Ayesha Ulde is a final-year Interdisciplinary Dual Degree in Computational Engineering in the Metallurgical & Materials Engineering Department at Indian Institute of Technology (IIT) Madras. She is pursuing her Master's thesis under the MARVEL Inspire Potentials Fellowship at MADES lab, where she is predicting precipitates in ternary Magnesium alloys using first-principles techniques.
+  pubmed_name:
+
