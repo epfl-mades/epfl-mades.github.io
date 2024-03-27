@@ -7,7 +7,7 @@ nav: true
 nav_order: 3
 ---
 
-> ##### Postdoctoral research associate position : Computational design of multicomponent materials
+> ##### Postdoctoral research associate : Computational design of multicomponent materials
 > The Laboratory of Materials Design and Simulation (MADES) at the École polytechnique fédérale de Lausanne (EPFL), led by Prof. Anirudh Raju Natarajan, has an opening for a postdoctoral research associate. The successful candidate will lead an exciting project focused on utilizing first-principles models, machine-learning techniques and statistical mechanics simulations to identify synthesizable multicomponent materials with favorable mechanical properties. The postdoc will get an opportunity to work closely with experimental collaborators and world-class researchers at EPFL.
 > 
 > Candidates with a passion for scientific inquiry, and creativity are invited to apply. The position requires:
