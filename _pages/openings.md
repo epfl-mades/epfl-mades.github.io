@@ -7,6 +7,26 @@ nav: true
 nav_order: 3
 ---
 
+> ##### Postdoctoral research associate position : Computational design of multicomponent materials
+> The Laboratory of Materials Design and Simulation (MADES) at the École polytechnique fédérale de Lausanne (EPFL), led by Prof. Anirudh Raju Natarajan, has an opening for a postdoctoral research associate. The successful candidate will lead an exciting project focused on utilizing first-principles models, machine-learning techniques and statistical mechanics simulations to design  synthesizable multicomponent materials with favorable mechanical properties. The postdoc will get an opportunity to work closely with experimental collaborators and world-class researchers at EPFL.
+> 
+> Candidates with a passion for scientific inquiry, and creativity are invited to apply. The position requires:
+>  - A doctoral degree in materials science or a closely related field
+>  - Experience with first-principles methods such as density-functional theory, Monte-Carlo simulations, molecular dynamics etc.
+>  - Strong background in thermodynamics, statistical mechanics and crystallography
+>  - (Optional) Programming skills as evidenced by contributions to a widely used codebase would be preferred
+>  - (Optional) Experience with machine-learning tools such as PyTorch or TensorFlow
+>  - Proficient in written and spoken English
+> 
+> Interested candidates should send an email to Prof. Natarajan (anirudh.natarajan@epfl.ch) with the following documents:
+> 1. CV
+> 2. One page cover letter highlighting research interests, experience and future plans
+> 3. (Optional) Link to a code sample or codebase developed by the candidate
+> Please include "postdoc@MADES" in the subject line of the e-mail.
+> 
+> Preference will be given to candidates that are available to begin their appointment by August 2024, although we are open to discussing the exact start date. The salary will be according to the scale for postdoctoral candidates as prescribed by the ETH board. Applicants must have a PhD before starting their appointment. The initial appointment length will be for up to 12 months with a potential for extension subject to performance and availability of funding.
+{: .block-announce }
+
 We are always looking for talented researchers to join our laboratory. Please read the information on this page _before_ applying for a position in the laboratory. Hiring is done on a rolling basis through out the year.  
 
 The MADES laboratory is interested in the development and application of computational techniques to the design and discovery of advanced engineering materials. Researchers in the laboratory have the opportunity to collaborate with internal and external research groups. We especially value creative researchers with a passion for bridging basic science with advanced engineering applications. Candidates will have the opportunity to work in a diverse, interdisciplinary and dynamic environment.
