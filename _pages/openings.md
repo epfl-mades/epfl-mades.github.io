@@ -8,7 +8,7 @@ nav_order: 3
 ---
 
 > ##### Postdoctoral research associate position : Computational design of multicomponent materials
-> The Laboratory of Materials Design and Simulation (MADES) at the École polytechnique fédérale de Lausanne (EPFL), led by Prof. Anirudh Raju Natarajan, has an opening for a postdoctoral research associate. The successful candidate will lead an exciting project focused on utilizing first-principles models, machine-learning techniques and statistical mechanics simulations to design  synthesizable multicomponent materials with favorable mechanical properties. The postdoc will get an opportunity to work closely with experimental collaborators and world-class researchers at EPFL.
+> The Laboratory of Materials Design and Simulation (MADES) at the École polytechnique fédérale de Lausanne (EPFL), led by Prof. Anirudh Raju Natarajan, has an opening for a postdoctoral research associate. The successful candidate will lead an exciting project focused on utilizing first-principles models, machine-learning techniques and statistical mechanics simulations to identify synthesizable multicomponent materials with favorable mechanical properties. The postdoc will get an opportunity to work closely with experimental collaborators and world-class researchers at EPFL.
 > 
 > Candidates with a passion for scientific inquiry, and creativity are invited to apply. The position requires:
 >  - A doctoral degree in materials science or a closely related field
@@ -22,6 +22,7 @@ nav_order: 3
 > 1. CV
 > 2. One page cover letter highlighting research interests, experience and future plans
 > 3. (Optional) Link to a code sample or codebase developed by the candidate
+>
 > Please include "postdoc@MADES" in the subject line of the e-mail.
 > 
 > Preference will be given to candidates that are available to begin their appointment by August 2024, although we are open to discussing the exact start date. The salary will be according to the scale for postdoctoral candidates as prescribed by the ETH board. Applicants must have a PhD before starting their appointment. The initial appointment length will be for up to 12 months with a potential for extension subject to performance and availability of funding.
