@@ -16,6 +16,11 @@
   --global-divider-color: rgba(0,0,0,.1);
   --global-card-bg-color: #{$white-color};
 
+  --global-announce-block: #{$mades-red};
+  --global-announce-block-bg: #{$grey-color-light};
+  --global-announce-block-text: #{$black-color};
+  --global-announce-block-title: #{$mades-red};
+
   .fa-sun {
     display : none;
   }

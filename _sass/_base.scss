@@ -40,10 +40,34 @@ figure, img {
 
 blockquote {
   background: var(--global-bg-color);
-  border-left: 2px solid var(--global-theme-color);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  font-size: 1.2rem;
+  // border-left: 5px solid var(--global-theme-color);
+  border: 3px solid var(--global-theme-color);
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 1em;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  /* Announce blockquotes */
+  &.block-announce {
+    border-color: var(--global-announce-block);
+    background-color: var(--global-announce-block-bg);
+
+    p {
+      color: var(--global-announce-block-text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-announce-block-title);
+    }
+  }
 }
 
 // Math
