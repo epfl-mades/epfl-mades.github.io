@@ -42,13 +42,13 @@
   description: Lorenzo received his Master of Physics from the University of Oxford. His PhD research focuses on the development of statistical mechanics approaches to the simulation of thermal processes in solid state systems, mainly metals.
   pubmed_name:
 
-- name: Abdullah Aydemir
-  image: team_abdullah.png
+- name: Damien Lee Khai Jie
+  image: team_damien.jpg
   altimage:
-  position: Master's student
-  email: abdullah.aydemir (at) epfl.ch
+  position: Doctoral Assistant
+  email: damien.lee (at) epfl.ch
   website:
-  scholar:
+  scholar: iBsWaBwAAAAJ
   twitter:
-  description: Abdullah is pursuing his Master's degree in Materials Science and Engineering at EPFL. His research focuses on the first-principles study of the thermodynamic and vibrational properties of metallic alloys.
-  pubmed_name:
+  description: Damien received his Bachelor's in Chemical Engineering and Master's in Materials Science and Engineering from the National University of Singapore. He is currently pursuing his PhD in the MADES laboratory, focusing on the development of high-fidelity machine learning models to predict the thermodynamic and kinetic properties of multicomponent systems.
+  orcid: orcid.org/0009-0006-1100-6477
