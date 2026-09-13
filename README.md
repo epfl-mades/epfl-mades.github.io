@@ -1,13 +1,12 @@
-# Laboratory of materials design and simulation (MADES)
+# epfl-mades.github.io
 
-<img src="assets/img/epfl_mades_header.png" width="100%" class="center"> 
+Website of the [Laboratory of Materials Design and Simulation (MADES)](https://epfl-mades.github.io)
+at EPFL, built with [Jekyll](https://jekyllrb.com/) on the
+[al-folio](https://github.com/alshedivat/al-folio) theme and published to GitHub Pages.
 
-The Laboratory of Materials Design and Simulation (MADES) is part of the <a href=''>Institute of Materials</a> within the School of Engineering at École Polytechnique Fédérale de Lausanne. The laboratory is led by <a href='https://people.epfl.ch/anirudh.natarajan'>Prof.Anirudh Raju Natarajan</a> 
+- **Editing the site** — see [CONTRIBUTING.md](CONTRIBUTING.md): how to run it locally, and how
+  to add a person, a publication or a news item.
+- **Working on the repository** — see [CLAUDE.md](CLAUDE.md) for conventions, and
+  [docs/MIGRATION_PLAN.md](docs/MIGRATION_PLAN.md) for the al-folio v1.2 rebuild.
 
-<img src="assets/img/MADES_summary.png" width="100%" class="center">
-
-<center>
-We develop first-principles phenomenological models of materials with the goal of understanding and designing novel materials, and processing techniques.
-</center>
-
-The website is based on the [`al-folio`](https://github.com/alshedivat/al-folio) theme powered by `Jekyll`
+Theme licensed under the MIT License; see [LICENSE](LICENSE). Site content is the laboratory's.

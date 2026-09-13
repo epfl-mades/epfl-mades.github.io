@@ -1,0 +1,169 @@
+# ==============================================================================
+# MADES people
+#
+# One file, replacing the five (members/admin/postdocs/students/alumni) that had
+# drifted into five different schemas. Rendered by _pages/team.md through
+# _includes/person-card.liquid.
+#
+# Conventions:
+#   slug        the /team/#anchor and the image basename; lowercase, hyphenated
+#   group       must match a key under `groups:` below
+#   order       position within the group
+#   image       path under assets/img/
+#   email       a REAL address -- protect_email obfuscates it at build time, so the
+#               old "x (at) epfl.ch" spelling is no longer needed
+#   links.orcid the bare identifier, with no orcid.org/ prefix and no scheme
+#
+# Omit any key that does not apply; the card renders only what is present.
+# See CONTRIBUTING.md for how to add someone.
+# ==============================================================================
+
+groups:
+  - id: pi
+    style: feature # full-width row: photo beside the full biography
+  - id: postdocs
+    title: Postdoctoral Researchers
+    style: cards
+  - id: students
+    title: Doctoral Students
+    style: cards
+  - id: admin
+    title: Administration
+    style: cards
+  - id: alumni
+    title: Alumni
+    style: compact # name, then previously/now -- no photo, no biography
+
+people:
+  # ---------------------------------------------------------------- PI --------
+  - name: Anirudh Raju Natarajan
+    slug: anirudh-raju-natarajan
+    group: pi
+    order: 1
+    position: Tenure-Track Assistant Professor
+    image: people/anirudh-raju-natarajan.jpg
+    email: anirudh.natarajan@epfl.ch
+    description: Anirudh received a B.Tech. in Metallurgical and Materials Engineering from the Indian
+      Institute of Technology, Madras, a M.S in Materials Science and Engineering from the
+      University of Michigan, Ann Arbor and a Ph.D. in Materials from the University of
+      California, Santa Barbara. He set up the Laboratory of Materials Design and Simulation
+      (MADES) at EPFL in 2022. His research interests are in the computational design and
+      discovery of advanced engineering materials.
+    links:
+      website: https://people.epfl.ch/anirudh.natarajan
+      github: anirudhrn
+      scholar: Ihtr-TsAAAAJ
+
+  # ------------------------------------------------------------- ADMIN --------
+  - name: Alexandra Morrison
+    slug: alexandra-morrison
+    group: admin
+    order: 1
+    position: Administrative Assistant
+    image: people/alexandra-morrison.jpg
+    email: alexandra.morrison@epfl.ch
+
+  # ---------------------------------------------------------- POSTDOCS --------
+  - name: Manura Liyanage
+    slug: manura-liyanage
+    group: postdocs
+    order: 1
+    position: Postdoctoral Researcher
+    image: people/manura-liyanage.jpg
+    email: pandula.liyanage@epfl.ch
+    description: Manura graduated from University of Moratuwa, Sri Lanka with a B.Sc. in civil engineering
+      and a M.Sc. (Research). He got his Ph.D. from Carleton University in Ottawa, Canada with
+      the thesis multi-scale modelling of hydrogen diffusion in solids. He worked for the
+      laboratory for multiscale mechanics modeling at EPFL and the laboratory for advanced
+      material processing at EMPA as a postdoctoral researcher. His work at MADES is focused on
+      ductility and strength of high entropy alloys.
+    links:
+      scholar: w-dHvW8AAAAJ
+      orcid: 0000-0002-5853-9688
+
+  - name: Xin Liu
+    slug: xin-liu
+    group: postdocs
+    order: 2
+    position: Postdoctoral Researcher
+    image: people/xin-liu.jpg
+    email: xin.liu@epfl.ch
+    description: Xin received his B.Eng. and M.Eng. in Mechanics from Tongji University, Shanghai, a Diplôme
+      d'Ingénieur in Mechanics and Materials from École nationale des ponts et chaussées, Paris,
+      and a Ph.D. in Materials Science and Engineering from EPFL. His research focuses on
+      understanding the deformation and strengthening mechanism in metallic alloys, and the
+      computational design and discovery of advanced engineering materials.
+    links:
+      scholar: W3s_suIAAAAJ
+
+  # ---------------------------------------------------------- STUDENTS --------
+  - name: Yann Lorris Müller
+    slug: yann-lorris-muller
+    group: students
+    order: 1
+    position: Doctoral Assistant
+    image: people/yann-lorris-muller.jpg
+    email: yann.muller@epfl.ch
+    description: Yann received a Master's degree in Materials Science and Engineering from EPFL in 2021.
+      After working for one year at the EMPA laboratory for Advanced Processing and Additive
+      Manufacturing, he began a Ph.D. in Materials Science in the MADES laboratory in 2022. He
+      uses first-principles electronic structure calculations and statistical mechanics
+      techniques to compute thermodynamic and kinetic properties of multicomponent refractory
+      alloys.
+
+  - name: Deepak Somani
+    slug: deepak-somani
+    group: students
+    order: 2
+    position: Doctoral Assistant
+    image: people/deepak-somani.jpg
+    email: deepak.somani@epfl.ch
+    description: Deepak graduated from the Indian Institute of Technology Kharagpur (IIT KGP) in 2023 with a
+      Bachelor's in Mechanical Engineering and a Master's in Thermal Science and Engineering. His
+      research is focused on elucidating defect thermodynamics in alloys.
+
+  - name: Claire Paetsch
+    slug: claire-paetsch
+    group: students
+    order: 3
+    position: Doctoral Assistant
+    image: people/claire-paetsch.jpg
+    email: claire.paetsch@epfl.ch
+    description: Claire received her B.S and M.S in Materials Science and Engineering at ETH Zurich. She
+      worked as a research scholar predicting the energy landscape of Li-S at LBNL using
+      first-principles. In 2023 she began her Ph.D. at EPFL's MADES laboratory. Her current
+      research focuses on developing methods to design alloys for hydrogen related applications.
+
+  - name: Lorenzo Piersante
+    slug: lorenzo-piersante
+    group: students
+    order: 4
+    position: Doctoral Assistant
+    image: people/lorenzo-piersante.jpg
+    email: lorenzo.piersante@epfl.ch
+    description: Lorenzo received his Master of Physics from the University of Oxford. His Ph.D. research
+      focuses on the development of statistical mechanics approaches to the simulation of thermal
+      processes in solid state systems, mainly metals.
+
+  - name: Damien Lee Khai Jie
+    slug: damien-lee-khai-jie
+    group: students
+    order: 5
+    position: Doctoral Assistant
+    image: people/damien-lee-khai-jie.jpg
+    email: damien.lee@epfl.ch
+    description: Damien received his Bachelor's in Chemical Engineering and Master's in Materials Science and
+      Engineering from the National University of Singapore. He is currently pursuing his Ph.D. in
+      the MADES laboratory, focusing on the development of high-fidelity machine learning models
+      to predict the thermodynamic and kinetic properties of multicomponent systems.
+    links:
+      scholar: iBsWaBwAAAAJ
+      orcid: 0009-0006-1100-6477
+
+  # ------------------------------------------------------------ ALUMNI --------
+  - name: Abdullah Aydemir
+    slug: abdullah-aydemir
+    group: alumni
+    order: 1
+    previously: Master's student at EPFL
+    now: Doctoral student at EPFL

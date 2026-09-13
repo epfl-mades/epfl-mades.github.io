@@ -1,6 +1,66 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Venue badges on /publications/.
+#
+# Keyed by the `abbr` field of an entry in _bibliography/papers.bib. `color` is applied
+# as the badge background and the text on it is white, so every colour here clears WCAG
+# AA (4.5:1) against white; the closest hue sits well away from the MADES red so badges
+# never read as site chrome. An abbr with no entry below renders uncoloured -- which is
+# what every badge did before, because this file still held al-folio's demo data
+# (AJP, PhysRev) and neither abbreviation appears in our bibliography.
+#
+# Adding a paper in a new venue means adding its abbr here too.
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ActaMat": # Acta Materialia
+  url: https://www.sciencedirect.com/journal/acta-materialia
+  color: "#0b5c63"
+
+"PRB": # Physical Review B
+  url: https://journals.aps.org/prb/
+  color: "#1f4e8c"
+
+"PRM": # Physical Review Materials
+  url: https://journals.aps.org/prmaterials/
+  color: "#3a6ea5"
+
+"PRL": # Physical Review Letters
+  url: https://journals.aps.org/prl/
+  color: "#13315c"
+
+"npjCompuMats": # npj Computational Materials
+  url: https://www.nature.com/npjcompumats/
+  color: "#00695c"
+
+"CommatSci": # Computational Materials Science
+  url: https://www.sciencedirect.com/journal/computational-materials-science
+  color: "#5b4b8a"
+
+"CMA": # Computer Methods in Applied Mechanics and Engineering
+  url: https://www.sciencedirect.com/journal/computer-methods-in-applied-mechanics-and-engineering
+  color: "#6d4c7d"
+
+"JOM": # JOM (The Journal of The Minerals, Metals & Materials Society)
+  url: https://link.springer.com/journal/11837
+  color: "#2d6a4f"
+
+"ICML": # International Conference on Machine Learning
+  url: https://icml.cc/
+  color: "#3f4a5a"
+
+"ChemMater": # Chemistry of Materials
+  url: https://pubs.acs.org/journal/cmatex
+  color: "#7b3f9d"
+
+"MRL": # Materials Research Letters
+  url: https://www.tandfonline.com/journals/tmrl20
+  color: "#8a6d1f"
+
+"AnnuRev": # Annual Review of Materials Research
+  url: https://www.annualreviews.org/journal/matsci
+  color: "#44637a"
+
+"Small": # Small
+  url: https://onlinelibrary.wiley.com/journal/16136829
+  color: "#1f6f8b"
+
+"arXiv": # preprints -- deliberately neutral, so it reads as "not yet a journal"
+  url: https://arxiv.org/
+  color: "#555555"

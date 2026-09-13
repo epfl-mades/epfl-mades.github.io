@@ -2,16 +2,18 @@
 layout: page
 permalink: /publications/
 title: Publications
-description:
-years: [2025,2024,2023,2022,2021,2020,2019,2018,2017,2016]
 nav: true
 nav_order: 1
 ---
-<!-- _pages/publications.md -->
+
+<!-- Grouping and ordering come from `scholar.group_by: year` in _config.yml, so there is
+     no list of years to maintain here. The pre-v1 page hardcoded years: [2025 ... 2016],
+     which silently dropped any paper published in a year nobody had remembered to add. -->
+
+{% include bib_search.liquid %}
+
 <div class="publications">
 
-{%- for y in page.years %}
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-{% endfor %}
+{% bibliography %}
 
 </div>

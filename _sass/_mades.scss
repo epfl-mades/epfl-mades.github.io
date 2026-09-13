@@ -1,0 +1,415 @@
+// =============================================================================
+// MADES site styles
+//
+// The al-folio gems own every other stylesheet. This file has no counterpart in
+// al_folio_core, so nothing here can ever conflict with an upstream change --
+// assets/css/main.scss is the only real override the site carries for styling.
+//
+// Load order matters: the gem's prebuilt assets/css/tailwind.css is linked
+// BEFORE main.css and is not wrapped in @layer, so equal-specificity rules here
+// win on source order. That is what lets the body font rule below beat
+// Tailwind's `body{font-family:Roboto,sans-serif}`.
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Brand colour
+//
+// Set the CSS custom properties rather than the Sass variables, so we do not
+// have to shadow the gem's _variables.scss or _themes.scss.
+// -----------------------------------------------------------------------------
+
+:root {
+  --global-theme-color: #b52225; // MADES red
+  --global-hover-color: #b52225; // pre-v1 left this purple, so links hovered the wrong colour
+  --global-highlight-color: #b52225;
+}
+
+// Dark mode is disabled site-wide (enable_darkmode: false), but keep the palette
+// coherent so turning it on later does not surface al-folio's default cyan.
+html[data-theme="dark"] {
+  --global-theme-color: #e2565a; // lightened for contrast on a dark ground
+  --global-hover-color: #e2565a;
+  --global-highlight-color: #e2565a;
+}
+
+// -----------------------------------------------------------------------------
+// Typography
+//
+// A plain system stack -- no web font to load. Setting it on body (and letting
+// the rest inherit) rather than on a hand-listed set of selectors -- the pre-v1
+// rule listed p, h1-h6, em, div, li, span, strong, which left buttons, inputs,
+// table cells and the navbar brand falling back to an unloaded Roboto.
+//
+// The gem sets no root font-size of its own -- every rem-based size in its
+// stylesheets is relative to the browser default (16px). Sizing html down a
+// notch scales all of them together, site-wide, without touching each rule.
+// -----------------------------------------------------------------------------
+
+$mades-font-stack: Arial, Helvetica, "Helvetica Neue", sans-serif;
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: $mades-font-stack;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+// -----------------------------------------------------------------------------
+// Blockquotes
+//
+// A full 3px border rather than the theme's 5px left rule, at body size.
+// -----------------------------------------------------------------------------
+
+blockquote {
+  border: 3px solid var(--global-theme-color);
+  font-size: 1rem;
+  text-align: center;
+}
+
+// -----------------------------------------------------------------------------
+// Publications: the "award" button (e.g. an Editor's Suggestion)
+//
+// The gem only colours this button's border (_publications.scss: `a.award.btn
+// { border-color: var(--global-highlight-color); }`); fill it solidly instead.
+// !important is needed because the gem's own `a.btn { color: ... }` is nested
+// five selectors deep (.publications ol.bibliography li .links a.btn), which
+// outweighs a same-depth override here on specificity alone -- matching that
+// exact chain would silently break again the next time the gem restructures
+// its nesting.
+// -----------------------------------------------------------------------------
+
+.links a.award.btn {
+  color: white !important;
+  background-color: var(--global-highlight-color) !important;
+  border-color: var(--global-highlight-color) !important;
+
+  &:hover {
+    color: white !important;
+    opacity: 0.85;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Publications filter box
+//
+// The gem styles this identically to the (unused) newsletter form input: a
+// boxed, black-bordered field with no theme colour of its own -- the one bit
+// of generic, unbranded chrome left on the page. Restyle as an underlined
+// field instead of a boxed one, echoing the dashed themed underline already
+// used for author links in this same list.
+// -----------------------------------------------------------------------------
+
+.bibsearch-form-input {
+  display: block;
+  width: 20rem;
+  max-width: 100%;
+  margin: 0 auto 1.75rem;
+  padding: 0.4rem 0;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--global-divider-color);
+  border-radius: 0;
+  box-shadow: none;
+  font-family: $mades-font-stack;
+  font-size: 1rem;
+
+  &:focus {
+    border-bottom-color: var(--global-theme-color);
+  }
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Centred page header on the about page
+//
+// Replaces the deprecated align="center" attributes the pre-v1 fork carried in
+// its _layouts/about.html override, so no layout override is needed at all.
+// -----------------------------------------------------------------------------
+
+.post > .post-header {
+  .post-title,
+  .desc {
+    text-align: center;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Team page
+//
+// Plain CSS Grid, deliberately. The prebuilt tailwind.css ships pre-purged with no
+// build step in this repo, so grid-cols-*, gap-* and the sm:/md: variants do not
+// exist and would render unstyled with no warning. The Bootstrap-shaped classes
+// (.row, .col-sm-*) are a compatibility layer that upstream deprecates in v1.3 and
+// removes in v2.0. Twenty lines of real CSS outlive both.
+// -----------------------------------------------------------------------------
+
+$mades-feature-photo: 15rem;
+
+.mades-group-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+// Clear the fixed navbar when arriving at /team/#some-slug or
+// /software/#some-slug. Replaces the padding-top:60px / margin-top:-60px hack
+// the pre-v1 page repeated five times.
+.mades-person,
+.mades-alumnus,
+.mades-software {
+  scroll-margin-top: 5rem;
+}
+
+.mades-person-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.mades-person-name {
+  margin: 0 0 0.1rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.mades-person-position {
+  margin: 0 0 0.35rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+.mades-person-bio {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+// Contact and profile icons
+.mades-person-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0;
+  }
+
+  a,
+  .al-email-protect {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  // The email address itself is click-to-copy text, not an icon; keep it quiet.
+  .al-email-protect {
+    font-size: 0.85rem;
+  }
+}
+
+// ---- PI: photo beside the full biography ------------------------------------
+
+.mades-person--feature {
+  display: grid;
+  grid-template-columns: $mades-feature-photo 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  margin-bottom: 1rem;
+
+  .mades-person-name {
+    font-size: 1.4rem;
+  }
+}
+
+// ---- Everyone else: a responsive card grid ----------------------------------
+
+.mades-person-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // roughly three people per row
+  gap: 1.75rem 1.5rem;
+  align-items: start;
+}
+
+.mades-person--card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+// ---- Alumni: a table, no photo ------------------------------------------------
+
+// Lets a table wider than its column budget scroll on its own axis instead of
+// the whole page.
+.mades-alumni-wrap {
+  overflow-x: auto;
+}
+
+.mades-alumni {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    text-align: left;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  th {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+.mades-alumnus-name {
+  font-weight: 700;
+}
+
+.mades-alumnus-role,
+.mades-alumnus-now {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+// -----------------------------------------------------------------------------
+// Software page
+//
+// auto-fit + a min/max range gives fixed-width, centred cards that neither
+// stretch edge-to-edge with only one entry nor wrap awkwardly once there are
+// several -- unlike the team grid, this page has no fixed count to design a
+// column count around.
+// -----------------------------------------------------------------------------
+
+.mades-software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 28rem));
+  justify-content: center;
+  gap: 1.75rem 1.5rem;
+  align-items: start;
+}
+
+.mades-software {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mades-software-logo img {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  display: block;
+  margin: 0 0 0.5rem;
+}
+
+.mades-software-name {
+  margin: 0 0 0.1rem;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.mades-software-tagline {
+  margin: 0 0 0.5rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.mades-software-badges {
+  margin: 0 0 0.6rem;
+
+  img {
+    height: 1.15rem;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+  }
+}
+
+.mades-software-description {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.mades-software-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2rem; // fewer, more deliberate links here than the team page's icon row
+
+  a {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+}
+
+// ---- Narrow screens ---------------------------------------------------------
+
+@media (max-width: 900px) {
+  .mades-person-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mades-person--feature {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  // Keep the PI portrait from filling a phone screen edge to edge.
+  .mades-person--feature .mades-person-photo {
+    max-width: $mades-feature-photo;
+  }
+
+  .mades-person-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Page headers
+//
+// page.liquid always emits <p class="post-description">, so a page with no
+// `description:` in its front matter leaves an empty paragraph holding open its
+// own margin under the heading. Collapse it. Pages that do set a description --
+// 404 is the only one -- are untouched.
+// -----------------------------------------------------------------------------
+
+.post-description:empty {
+  display: none;
+}
