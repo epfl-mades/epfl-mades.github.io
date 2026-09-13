@@ -1,0 +1,92 @@
+{% comment %}
+  Renders one entry from _data/software.yml.
+
+  This is a site-owned partial -- the gems ship nothing at this path, so it is NOT an
+  override and will never appear in `al-folio upgrade overrides audit`.
+
+  Parameters:
+    software  one entry from _data/software.yml
+
+  al-folio's own project-card includes (_includes/projects.liquid and
+  projects_horizontal.liquid, in al_folio_core) render a `project` that no layout in this
+  gem version ever instantiates -- _sass/_layout.scss even carries a `// TODO: redefine
+  projects layout.` comment where that page used to be. Following the team page's pattern
+  instead: a plain grid, this partial, and grid CSS in _mades.scss.
+{% endcomment %}
+
+<article class="mades-software" id="{{ software.slug }}">
+  {% if software.logo %}
+    {% comment %}
+      figure.liquid resolves `path` from the site root, not from assets/img/, so the
+      prefix is added here and _data/software.yml stores just "software/<slug>.png".
+    {% endcomment %}
+    {% assign logo_path = software.logo | prepend: 'assets/img/' %}
+    <div class="mades-software-logo">
+      {% include figure.liquid path=logo_path alt=software.name class="img-fluid" %}
+    </div>
+  {% endif %}
+
+  <div class="mades-software-body">
+    <h3 class="mades-software-name">{{ software.name }}</h3>
+    {% if software.tagline %}
+      <p class="mades-software-tagline">{{ software.tagline }}</p>
+    {% endif %}
+
+    {% if software.pypi or software.license %}
+      <p class="mades-software-badges">
+        {% if software.pypi %}
+          <img src="https://img.shields.io/pypi/v/{{ software.pypi }}" alt="PyPI version" />
+        {% endif %}
+        {% if software.license %}
+          <img
+            src="https://img.shields.io/badge/license-{{ software.license | url_encode }}-blue"
+            alt="{{ software.license }} License"
+          />
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if software.description %}
+      <p class="mades-software-description">{{ software.description }}</p>
+    {% endif %}
+
+    <ul class="mades-software-links">
+      {% if software.github %}
+        <li>
+          <a href="{{ software.github }}" title="Source code" aria-label="Source code of {{ software.name }}">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      {% endif %}
+      {% if software.docs %}
+        <li>
+          <a href="{{ software.docs }}" title="Documentation" aria-label="Documentation for {{ software.name }}">
+            <i class="fa-solid fa-book"></i>
+          </a>
+        </li>
+      {% endif %}
+      {% if software.pypi %}
+        <li>
+          <a
+            href="https://pypi.org/project/{{ software.pypi }}/"
+            title="PyPI package"
+            aria-label="PyPI package for {{ software.name }}"
+          >
+            <i class="fa-brands fa-python"></i>
+          </a>
+        </li>
+      {% endif %}
+      {% if software.citation %}
+        <li>
+          <a
+            href="{{ '/publications/' | relative_url }}#{{ software.citation }}"
+            title="Paper"
+            aria-label="Paper describing {{ software.name }}"
+          >
+            <i class="fa-solid fa-file-lines"></i>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</article>

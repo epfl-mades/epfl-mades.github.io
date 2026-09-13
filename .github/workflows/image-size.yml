@@ -1,0 +1,37 @@
+# Rejects oversized images before they reach the repository.
+#
+# The pre-v1 site carried 81 MB in assets/img/, including a 20 MB 9167x6250 portrait
+# rendered at thumbnail size, because nothing ever checked. Jekyll generates the
+# responsive variants at build time, so the committed original only needs to be large
+# enough for the 1400px bucket.
+name: Image size
+
+on:
+  pull_request:
+    paths:
+      - "assets/img/**"
+  push:
+    paths:
+      - "assets/img/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Reject images over 500 KB 🔍
+        run: |
+          limit=512000
+          oversized=$(find assets/img -type f -size +${limit}c -printf '%s\t%p\n' | sort -rn)
+          if [ -n "$oversized" ]; then
+            echo "::error::Images larger than 500 KB found in assets/img/:"
+            echo "$oversized" | awk -F'\t' '{printf "  %6.2f MB  %s\n", $1/1048576, $2}'
+            echo ""
+            echo "Resize before committing, for example:"
+            echo "  convert INPUT -auto-orient -resize '1200x1200>' -strip -quality 82 OUTPUT.jpg"
+            echo "See CONTRIBUTING.md."
+            exit 1
+          fi
+          echo "All images in assets/img/ are within budget."

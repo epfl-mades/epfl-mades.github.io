@@ -1,0 +1,101 @@
+{% comment %}
+  Renders one person from _data/people.yml.
+
+  This is a site-owned partial -- the gems ship nothing at this path, so it is NOT an
+  override and will never appear in `al-folio upgrade overrides audit`.
+
+  Parameters:
+    person  one entry from _data/people.yml
+    style   "feature" (full-width, photo beside the biography)
+            "card"    (grid cell, photo above the biography)
+            "compact" (a <tr> of name/previously/now, no photo -- caller supplies the
+                       surrounding <table>)
+
+  Replaces five copy-pasted blocks in the pre-v1 _pages/team.md, which built absolute
+  image URLs from site.url (so portraits loaded from production even on localhost) and
+  used col-sm-4 + col-sm-4 + col-sm-8 -- sixteen columns, which is why every biography
+  wrapped onto its own row.
+{% endcomment %}
+
+{% assign style = include.style | default: 'card' %}
+{% assign person = include.person %}
+
+{% if style == 'compact' %}
+  <tr class="mades-alumnus" id="{{ person.slug }}">
+    <td class="mades-alumnus-name">{{ person.name }}</td>
+    <td class="mades-alumnus-role">{{ person.previously }}</td>
+    <td class="mades-alumnus-now">{{ person.now }}</td>
+  </tr>
+
+{% else %}
+  <article class="mades-person mades-person--{{ style }}" id="{{ person.slug }}">
+    {% if person.image %}
+      {% comment %}
+        figure.liquid resolves `path` from the site root, not from assets/img/, so the
+        prefix is added here and _data/people.yml stores just "people/<slug>.jpg".
+      {% endcomment %}
+      {% assign photo_path = person.image | prepend: 'assets/img/' %}
+      <div class="mades-person-photo">
+        {%
+          include figure.liquid
+          path=photo_path
+          alt=person.name
+          class="img-fluid rounded z-depth-1"
+          sizes="(max-width: 600px) 90vw, 320px"
+        %}
+      </div>
+    {% endif %}
+
+    <div class="mades-person-body">
+      <h3 class="mades-person-name">{{ person.name }}</h3>
+      {% if person.position %}
+        <p class="mades-person-position">{{ person.position }}</p>
+      {% endif %}
+
+      <ul class="mades-person-links">
+        {% if person.email %}
+          <li>
+            <span title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></span>
+            {% al_email_protect_link person.email %}
+          </li>
+        {% endif %}
+        {% if person.links.website %}
+          <li>
+            <a href="{{ person.links.website }}" title="Personal page" aria-label="Personal page of {{ person.name }}">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          </li>
+        {% endif %}
+        {% if person.links.scholar %}
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user={{ person.links.scholar }}"
+              title="Google Scholar"
+              aria-label="Google Scholar profile of {{ person.name }}"
+            >
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        {% endif %}
+        {% if person.links.orcid %}
+          <li>
+            <a href="https://orcid.org/{{ person.links.orcid }}" title="ORCID" aria-label="ORCID record of {{ person.name }}">
+              <i class="ai ai-orcid"></i>
+            </a>
+          </li>
+        {% endif %}
+        {% if person.links.github %}
+          <li>
+            <a href="https://github.com/{{ person.links.github }}" title="GitHub" aria-label="GitHub profile of {{ person.name }}">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+
+      {% if person.description %}
+        <p class="mades-person-bio">{{ person.description }}</p>
+      {% endif %}
+    </div>
+  </article>
+{% endif %}

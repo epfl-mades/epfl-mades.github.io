@@ -1,0 +1,9 @@
+**/*.map
+**/*.min.css
+**/*.min.js
+node_modules/
+_site/
+# Zotero / Better-BibTeX export -- do not reformat
+_bibliography/
+Gemfile.lock
+package-lock.json

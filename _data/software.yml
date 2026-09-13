@@ -1,0 +1,36 @@
+# ==============================================================================
+# MADES software
+#
+# One file, one entry per project. Rendered by _pages/software.md through
+# _includes/software-card.liquid.
+#
+# Conventions:
+#   slug      the /software/#anchor
+#   logo      path under assets/img/software/, transparent background preferred
+#   github    the repository URL
+#   docs      optional -- omit if there's no separate documentation site
+#   pypi      optional -- the PyPI project name (not a URL); adds a live
+#             "PyPI version" badge and a link to the package page
+#   license   a short SPDX-style name (MIT, BSD-3-Clause, GPL-3.0, ...)
+#   citation  optional -- a citekey from _bibliography/papers.bib; links to
+#             that entry on the publications page instead of duplicating it
+#
+# Omit any key that does not apply; the card renders only what is present.
+# ==============================================================================
+
+- name: pyeCE
+  slug: pyece
+  tagline: Multicomponent cluster expansions made easy
+  description: >
+    Implements the embedded cluster expansion (eCE) formalism as a PyTorch module,
+    extending standard cluster expansions with trainable, chemistry-adapted
+    site-basis functions. Supports the full workflow -- building a symmetry-adapted
+    model, fitting a neural-network ECI with a ladder training scheme, and running
+    Canonical and Semi-Grand Canonical Monte Carlo simulations -- through both a
+    command-line interface and a Python API.
+  logo: software/pyece_logo.png
+  github: https://github.com/epfl-mades/pyece
+  docs: https://pyece.readthedocs.io
+  pypi: pyece-mades
+  license: MIT
+  citation: muller_2025_constructingmulticomponent

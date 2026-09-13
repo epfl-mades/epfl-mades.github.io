@@ -1,0 +1,46 @@
+# Native toolchain for running the site without Docker.
+#   mise install && mise run setup && mise run serve
+#
+# `mise run setup` rather than a bare `bundle install`: Gemfile.lock pins a BUNDLED WITH that
+# is newer than the bundler shipped inside Ruby, so `bundle` refuses to run until that exact
+# version is installed. Running the task through mise also guarantees it uses the Ruby below
+# and not whatever /usr/bin/ruby happens to be.
+#
+# Docker remains the reproducible path and the one closest to CI; use it whenever native
+# extensions (mini_racer, nokogiri, ImageMagick) give trouble. See CONTRIBUTING.md.
+#
+# Python is deliberately not pinned: upstream uses it only for nbconvert, to embed Jupyter
+# notebooks. This site has none. Add it here if that ever changes.
+
+[tools]
+ruby = "3.3.5" # matches .github/workflows/deploy.yml exactly
+node = "20"
+
+[tasks.setup]
+description = "One-time: install the bundler Gemfile.lock pins, then the gems"
+run = """
+bundler_version=$(awk '/^BUNDLED WITH/ { getline; print $1; exit }' Gemfile.lock)
+echo "Gemfile.lock pins bundler ${bundler_version}; ruby is $(ruby -e 'print RUBY_VERSION')"
+gem install "bundler:${bundler_version}" --no-document
+bundle install
+"""
+
+[tasks.serve]
+description = "Live-reloading local site on http://localhost:4000"
+run = "bundle exec jekyll serve --livereload --host 0.0.0.0"
+
+[tasks.build]
+description = "Production build into _site/"
+run = "JEKYLL_ENV=production bundle exec jekyll build"
+
+[tasks.audit]
+description = "al-folio upgrade contract check"
+run = "bundle exec al-folio upgrade audit --no-fail"
+
+[tasks.overrides]
+description = "List local overrides of gem-owned files and flag stale ones"
+run = "bundle exec al-folio upgrade overrides audit"
+
+[tasks.fmt]
+description = "Format everything with prettier"
+run = "npx prettier . --write"

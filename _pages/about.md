@@ -4,18 +4,26 @@ title: About
 permalink: /
 subtitle: <a href='https://www.epfl.ch/en/'>École Polytechnique Fédérale de Lausanne</a>
 
+# No profile sidebar: the page leads with the full-width lab banner instead.
 profile:
 
-news: false  # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
+
+announcements:
+  enabled: true # includes a list of news items
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: # blank -- show all news; there's no archive page, so a limit hides items entirely
 ---
-<img src="assets/img/epfl_mades_header.png" width="100%" class="center"> 
 
-The Laboratory of Materials Design and Simulation (MADES) is part of the <a href=''>Institute of Materials</a> within the School of Engineering at École Polytechnique Fédérale de Lausanne. The laboratory is led by <a href='https://people.epfl.ch/anirudh.natarajan'>Prof.Anirudh Raju Natarajan</a> 
+{% include figure.liquid loading="eager" path="assets/img/epfl_mades_header.png" alt="Laboratory of Materials Design and Simulation, EPFL" class="img-fluid" %}
 
-<img src="assets/img/MADES_summary.png" width="100%" class="center">
+The Laboratory of Materials Design and Simulation (MADES) is part of the
+[Institute of Materials](https://www.epfl.ch/schools/sti/imx/) within the School of Engineering
+at École Polytechnique Fédérale de Lausanne. The laboratory is led by
+[Prof. Anirudh Raju Natarajan](https://people.epfl.ch/anirudh.natarajan).
 
-<center>
-We develop first-principles phenomenological models of materials with the goal of understanding and designing novel materials, and processing techniques.
-</center>
+{% include figure.liquid path="assets/img/MADES_summary.png" alt="Overview of research in the MADES laboratory" class="img-fluid" %}
+
+> We develop first-principles models of materials with the goal of
+> understanding and designing novel materials and processing techniques.
