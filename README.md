@@ -6,5 +6,5 @@ at EPFL, built with [Jekyll](https://jekyllrb.com/) on the
 
 - **Editing the site** — see [CONTRIBUTING.md](CONTRIBUTING.md): how to run it locally, and how
   to add a person, a publication or a news item.
-  
+
 Theme licensed under the MIT License; see [LICENSE](LICENSE). Site content is the laboratory's.
