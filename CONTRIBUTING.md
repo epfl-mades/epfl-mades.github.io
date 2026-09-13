@@ -106,7 +106,7 @@ standard BibTeX fields — it silently drops `abbr`, `bibtex_show`, `selected`, 
 `preview` from every existing entry, since those are site-specific additions Zotero knows
 nothing about. That takes out every venue badge, "Bib" button, and the home page's
 selected-papers list in one paste, with no error to notice it by. Instead: in Zotero, select
-only the *new* reference(s) → Export Selected Items → Better BibTeX, and append just that to
+only the _new_ reference(s) → Export Selected Items → Better BibTeX, and append just that to
 the file. If you ever do need a full re-export, match old and new entries by `doi` first and
 carry the extra fields over by hand before replacing anything.
 
