@@ -374,9 +374,7 @@ DEPENDENCIES
   al_rtl (= 1.0.0)
   al_search (= 1.0.3)
   classifier-reborn
-  css_parser
   jekyll
-  jekyll-3rd-party-libraries
   jekyll-archives-v2
   jekyll-cache-bust
   jekyll-email-protect
