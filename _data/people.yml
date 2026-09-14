@@ -13,6 +13,7 @@
 #   email       a REAL address -- protect_email obfuscates it at build time, so the
 #               old "x (at) epfl.ch" spelling is no longer needed
 #   links.orcid the bare identifier, with no orcid.org/ prefix and no scheme
+#   left        alumni only: the year they left the group
 #
 # Omit any key that does not apply; the card renders only what is present.
 # See CONTRIBUTING.md for how to add someone.
@@ -164,29 +165,34 @@ people:
   - name: Abdullah Aydemir
     slug: abdullah-aydemir
     group: alumni
-    order: 1
+    order: 2
     previously: Master's student at EPFL
+    left: 2024
     now: Doctoral student at EPFL
 
   - name: Nagappan Nataraja Chockalingam
     group: alumni
-    order: 2
+    order: 3
     previously: E3 student
+    left: 2023
     now: Doctoral student at UC Berkeley
 
   - name: Ayesha Ulde
     group: alumni
     previously: E3 and INSPIRE Potentials student
+    left: 2023
     now: Doctoral student at University of Michigan
-    order: 3
+    order: 5
 
   - name: Vivienne Liu
     group: alumni
     previously: ERIP student
+    left: 2023
     now: Doctoral student at MIT
     order: 4
 
   - name: Victor Bugnion
     group: alumni
     previously: Master's student at EPFL
-    order: 5
+    left: 2026
+    order: 1
