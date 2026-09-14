@@ -167,3 +167,26 @@ people:
     order: 1
     previously: Master's student at EPFL
     now: Doctoral student at EPFL
+
+  - name: Nagappan Nataraja Chockalingam
+    group: alumni
+    order: 2
+    previously: E3 student
+    now: Doctoral student at UC Berkeley
+
+  - name: Ayesha Ulde
+    group: alumni
+    previously: E3 and INSPIRE Potentials student
+    now: Doctoral student at University of Michigan
+    order: 3
+
+  - name: Vivienne Liu
+    group: alumni
+    previously: ERIP student
+    now: Doctoral student at MIT
+    order: 4
+
+  - name: Victor Bugnion
+    group: alumni
+    previously: Master's student at EPFL
+    order: 5
