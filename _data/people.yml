@@ -160,6 +160,20 @@ people:
       scholar: iBsWaBwAAAAJ
       orcid: 0009-0006-1100-6477
 
+  - name: Tang Leng Ze
+    slug: tang-leng-ze
+    group: students
+    order: 6
+    position: Doctoral Assistant
+    image: people/tang-leng-ze.jpg
+    email: tang.lengze@epfl.ch
+    description: Leng Ze completed his Bachelor's in Materials Science and Engineering at Nanyang Technological University, Singapore. 
+      He previously worked at the Agency for Science, Technology and Research (A*STAR). 
+      His research in the MADES laboratory focuses on the designing multicomponent alloys for electrocatalysis.
+    links:
+      scholar: 3FQRcKsAAAAJ
+      github: tankylz
+
   # ------------------------------------------------------------ ALUMNI --------
   - name: Abdullah Aydemir
     slug: abdullah-aydemir
