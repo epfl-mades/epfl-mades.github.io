@@ -35,13 +35,13 @@
     {% if software.pypi or software.license %}
       <p class="mades-software-badges">
         {% if software.pypi %}
-          <img src="https://img.shields.io/pypi/v/{{ software.pypi }}" alt="PyPI version" />
+          <img src="https://img.shields.io/pypi/v/{{ software.pypi }}" alt="PyPI version">
         {% endif %}
         {% if software.license %}
           <img
             src="https://img.shields.io/badge/license-{{ software.license | url_encode }}-blue"
             alt="{{ software.license }} License"
-          />
+          >
         {% endif %}
       </p>
     {% endif %}

@@ -293,9 +293,14 @@ $mades-feature-photo: 15rem;
 }
 
 .mades-alumnus-role,
+.mades-alumnus-left,
 .mades-alumnus-now {
   color: var(--global-text-color-light);
   font-size: 0.9rem;
+}
+
+.mades-alumnus-left {
+  white-space: nowrap;
 }
 
 // -----------------------------------------------------------------------------

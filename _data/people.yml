@@ -13,6 +13,7 @@
 #   email       a REAL address -- protect_email obfuscates it at build time, so the
 #               old "x (at) epfl.ch" spelling is no longer needed
 #   links.orcid the bare identifier, with no orcid.org/ prefix and no scheme
+#   left        alumni only: the year they left the group
 #
 # Omit any key that does not apply; the card renders only what is present.
 # See CONTRIBUTING.md for how to add someone.
@@ -160,10 +161,52 @@ people:
       scholar: iBsWaBwAAAAJ
       orcid: 0009-0006-1100-6477
 
+  - name: Tang Leng Ze
+    slug: tang-leng-ze
+    group: students
+    order: 6
+    position: Doctoral Assistant
+    image: people/tang-leng-ze.jpg
+    email: tang.lengze@epfl.ch
+    description: Leng Ze completed his Bachelor's in Materials Science and Engineering at Nanyang Technological University, Singapore.
+      He previously worked at the Agency for Science, Technology and Research (A*STAR).
+      His research in the MADES laboratory focuses on the designing multicomponent alloys for electrocatalysis.
+    links:
+      scholar: 3FQRcKsAAAAJ
+      github: tankylz
+
   # ------------------------------------------------------------ ALUMNI --------
   - name: Abdullah Aydemir
     slug: abdullah-aydemir
     group: alumni
-    order: 1
+    order: 2
     previously: Master's student at EPFL
+    left: 2024
     now: Doctoral student at EPFL
+
+  - name: Nagappan Nataraja Chockalingam
+    group: alumni
+    order: 3
+    previously: E3 student
+    left: 2023
+    now: Doctoral student at UC Berkeley
+
+  - name: Ayesha Ulde
+    group: alumni
+    previously: E3 and INSPIRE Potentials student
+    left: 2023
+    now: Doctoral student at University of Michigan
+    order: 5
+
+  - name: Vivienne Liu
+    group: alumni
+    previously: ERIP student
+    left: 2023
+    now: Doctoral student at MIT
+    order: 4
+
+  - name: Victor Bugnion
+    group: alumni
+    previously: Master's student at EPFL
+    left: 2026
+    order: 1

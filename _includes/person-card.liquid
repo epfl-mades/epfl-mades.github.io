@@ -8,8 +8,8 @@
     person  one entry from _data/people.yml
     style   "feature" (full-width, photo beside the biography)
             "card"    (grid cell, photo above the biography)
-            "compact" (a <tr> of name/previously/now, no photo -- caller supplies the
-                       surrounding <table>)
+            "compact" (a <tr> of name/previously/left/now, no photo -- caller supplies
+                       the surrounding <table>)
 
   Replaces five copy-pasted blocks in the pre-v1 _pages/team.md, which built absolute
   image URLs from site.url (so portraits loaded from production even on localhost) and
@@ -24,6 +24,7 @@
   <tr class="mades-alumnus" id="{{ person.slug }}">
     <td class="mades-alumnus-name">{{ person.name }}</td>
     <td class="mades-alumnus-role">{{ person.previously }}</td>
+    <td class="mades-alumnus-left">{{ person.left }}</td>
     <td class="mades-alumnus-now">{{ person.now }}</td>
   </tr>
 

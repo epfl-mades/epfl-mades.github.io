@@ -27,6 +27,7 @@ nav_order: 2
       <tr>
         <th>Name</th>
         <th>Previously</th>
+        <th>Year left</th>
         <th>First position after leaving</th>
       </tr>
     </thead>

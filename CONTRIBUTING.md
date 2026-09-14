@@ -80,6 +80,11 @@ Edit [`_data/people.yml`](_data/people.yml) — one file, one entry per person:
 
 Leave out any key that does not apply — the card only renders what is present.
 
+**When someone leaves**, change their `group` to `alumni` and replace the card keys
+(`position`, `image`, `email`, `description`, `links`) with the three the alumni table
+shows: `previously` (their role here), `left` (the year they left), and `now` (their
+first position after leaving, omitted if unknown).
+
 **The photo** goes in `assets/img/people/<slug>.jpg`. Cards render it as a square
 (`aspect-ratio: 1 / 1` in `_sass/_mades.scss`), so crop it to a square, face-centered frame
 before committing — pick `SIZE` and the `+X+Y` offset so the crop includes the whole face:
